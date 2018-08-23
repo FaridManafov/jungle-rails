@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < Admin::AdminController
 
   def show
     @category = Category.find(params[:id])
