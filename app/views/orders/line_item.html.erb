@@ -1,0 +1,33 @@
+<% quantity = line_item.quantity %>
+<% if product = Product.find_by(id: line_item.product_id) %>
+  <% item_total = line_item.product.price * quantity %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Unit Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <%= image_tag line_item.product.image.tiny %>
+        <h1><%= line_item.product.name %></h1>
+      </td>
+      <td>
+        <%= line_item.product.price %>
+      </td>
+      <td>
+        <%= quantity %>
+      </td>
+      <td>
+        <%= line_item.product.price * quantity %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
