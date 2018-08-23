@@ -1,0 +1,9 @@
+<h1>Register</h1>
+
+<%= form_for :user, url: '/users' do |input| %>
+
+  Email: <%= input.text_field :email %>
+  Password: <%= input.password_field :password %>
+  <%= input.submit "Submit" %>
+
+<% end %>
