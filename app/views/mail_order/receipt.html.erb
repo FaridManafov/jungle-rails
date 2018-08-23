@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Your order has been received, Order number: <%= @order.id %>
+    <br><br></h1>
+
+    <p>
+      Your total is: <%= humanized_money_with_symbol Money.new(@order.total_cents) %>
+    </p>
+  </body>
+</html>
