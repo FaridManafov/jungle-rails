@@ -28,4 +28,24 @@
 
   </article>
 
+  <div>
+    <table>
+    <tr>
+      <th>User Reviews</th>
+      <th>User Ratings</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @product.reviews.each do |i| %>
+        <tr>
+          <td>
+            <%= i.description %>
+          </td>
+          <td>
+            <%= i.rating %>
+          </td>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 </section>
